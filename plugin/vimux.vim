@@ -63,7 +63,9 @@ function! VimuxRunLastCommand() abort
 endfunction
 
 function! VimuxRunCommand(command, ...) abort
-  if !exists('g:VimuxRunnerIndex') || s:hasRunner(g:VimuxRunnerIndex) ==# -1
+  if !exists('g:VimuxRunnerIndex') 
+      echom "JNSFK S"
+      echomsg g:VimuxRunnerIndex
     call VimuxOpenRunner()
   endif
   let l:autoreturn = 1
